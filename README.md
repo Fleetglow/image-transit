@@ -1,47 +1,53 @@
 # GPT-Image-2 中转站索引
 
-Vercel-ready Next.js site for the Notion page `GPT-Image-2 中转站可用渠道汇总`.
+纯静态 Next.js 网站，适合部署到 Vercel。
 
 ## 功能
 
-- 前台渠道目录：按次 / 按量分表、搜索、点击推荐 / 价格排序
-- 生成平台卡片、外链、YouTube 视频
-- 亮色 / 暗色模式，记住浏览器选择
-- `/admin` 管理后台
-- 管理员登录
-- PV / UV、每日趋势、来源、设备统计
-- 匿名访客统计：服务端只保存哈希后的访客标识
+- 按量 / 按次计费渠道分表
+- 搜索渠道名称、备注、网址
+- 点击推荐 / 价格排序
+- 亮色 / 暗色模式
+- 生成平台展示
+- 外部链接与 YouTube 视频
+- 响应式布局
 
-## 本地准备
+## 本地运行
 
 ```powershell
+Set-Location "D:\AI\image transit codex"
 npm install
-Copy-Item .env.example .env.local
+npm run dev
 ```
 
-编辑 `.env.local`：
+## 生成静态文件
 
-- `ADMIN_EMAIL`
-- `ADMIN_PASSWORD`
-- `ADMIN_SESSION_SECRET`
-- `ANALYTICS_SALT`
-- `DATABASE_URL`
+```powershell
+Set-Location "D:\AI\image transit codex"
+npm run build
+```
 
-## Neon 数据库
+静态文件输出到：
 
-在 Neon SQL Editor 执行 [`db/schema.sql`](./db/schema.sql)。执行后，前台访问会写入 `analytics_events`，每日汇总写入 `daily_analytics`。
+```text
+D:\AI\image transit codex\out
+```
 
 ## Vercel 部署
 
-1. 将项目导入 Vercel。
-2. 通过 Vercel Marketplace 添加 Neon Postgres。
-3. 配置上述管理员环境变量。
-4. 在 Neon SQL Editor 执行 `db/schema.sql`。
-5. 部署。
+直接将项目导入 Vercel。项目使用 `output: "export"` 生成静态站点，不需要数据库、环境变量或服务器后台。
 
-无需 Vercel Cron：每条访问事件写入时同步维护当天汇总，减少部署配置。
+## 更新内容
 
-## 当前内容来源
+修改：
 
-页面与数据基于用户提供的 Notion 页面及其「生图中转站」数据源快照，整理日期为 2026-09-02。价格、注册链接、可用性可能变化，充值前以目标站点实时信息为准。
+```text
+D:\AI\image transit codex\lib\data.ts
+```
+
+修改后重新部署即可。
+
+## 内容来源
+
+内容基于用户提供的 Notion 页面快照。价格、注册链接和可用性可能变化，请以目标站点实时信息为准。
 
