@@ -21,7 +21,8 @@ function ThemeToggle() {
     localStorage.setItem("theme", next ? "dark" : "light");
     document.documentElement.dataset.theme = next ? "dark" : "light";
   }
-  return <button className="ghost-btn icon-btn" onClick={toggle} aria-label="切换亮暗模式" title="切换亮暗模式"><img className="theme-icon" src={dark ? "/icons/mode-light.svg" : "/icons/mode-dark.svg"} alt="" /></button>;
+  const icon = dark ? "mode-light.svg" : "mode-dark.svg";
+  return <button className="ghost-btn icon-btn" onClick={toggle} aria-label="切换亮暗模式" title="切换亮暗模式"><img className="theme-icon" src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/icons/${icon}`} alt="" /></button>;
 }
 
 function priceValue(price: string) {
