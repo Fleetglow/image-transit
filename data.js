@@ -1,21 +1,6 @@
-export type Channel = {
-  name: string;
-  url: string;
-  billing: string;
-  price: string;
-  rating: number;
-  note: string;
-  highlights?: { text: string; color: "blue" | "red"; url?: string; code?: boolean }[];
-};
-
-export type Platform = {
-  name: string;
-  links: { label: string; url: string }[];
-  customRatio: boolean;
-  note: string;
-};
-
-export const CHANNELS: Channel[] = [
+// 渠道与平台数据——与原 Next.js 版 lib/data.ts 结构完全一致，日常更新只改这个文件
+// highlights 可选字段: text(必填), color("blue"|"red"), url(可选,渲染为链接), code(可选,等宽样式)
+const CHANNELS = [
   { name: "65535", url: "https://my.65535.space/register?aff=U2RF7SAVFLP3", billing: "按次计费", price: "0.038-0.100", rating: 10, note: "支持异步协议，多个渠道，低价组超分4K，稳定组原生4K。而且网站里还能看到出图记录，夯！支持香蕉生图" },
   { name: "apilio（柏拉图）", url: "https://api.apilio.ai/register?aff=zkhB140656", billing: "按次计费", price: "0.060", rating: 9, note: "4K生图已恢复，很快" },
   { name: "Change2Pro", url: "https://forkc2p.com/register?aff=WCYL3GENQDLL", billing: "按次计费", price: "0.020-0.100", rating: 9, note: "渠道也很多，支持原生4K，支持香蕉生图" },
@@ -37,7 +22,8 @@ export const CHANNELS: Channel[] = [
   { name: "onehop", url: "https://onehop.ai/invite/68CSRD", billing: "按量计费", price: "￥1.5/M", rating: 8, note: "仅支持1K，适合文生图使用，基本都在1分钱以下，2K和4K会变成香蕉模型，很奇怪" },
   { name: "球球", url: "https://qiuqiutoken.com/sign-up?aff=Dt1z", billing: "按量计费", price: "￥1.9/M", rating: 8, note: "按量和按次计费都有，视觉生成专用-gpt_image-codex分组价格非常低，基本都在1分钱以下，但只能1K，适合文生图使用。其他分组有4K但并不稳定。\n还支持香蕉和grok模型", highlights: [{ text: "视觉生成专用-gpt_image-codex", color: "blue", code: true }] },
 ];
-export const PLATFORMS: Platform[] = [
+
+const PLATFORMS = [
   { name: "大雄画布", links: [{ label: "夸克网盘", url: "https://pan.quark.cn/s/060e5b3d7849" }, { label: "GitHub", url: "https://github.com/hero8152/Infinite-Canvas/tree/main" }, { label: "作者 B 站", url: "https://space.bilibili.com/78652351" }], customRatio: true, note: "支持多个中转站，界面好看，操作丝滑，支持在线生成。" },
   { name: "GPT Image Playground", links: [{ label: "在线使用", url: "https://gpt-image-playground.cooksleep.dev/" }, { label: "GitHub", url: "https://github.com/CookSleep/gpt_image_playground" }], customRatio: true, note: "适合不想本地安装的用户，在线体验完整。" },
   { name: "麻衣画布", links: [{ label: "百度网盘", url: "https://pan.baidu.com/s/1mR_s6TcO6cyX5LN2WYxIZQ?pwd=yrdn" }, { label: "作者 B 站", url: "https://space.bilibili.com/28347006" }], customRatio: true, note: "功能丰富，已支持自定义比例，偶尔会卡。" },

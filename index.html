@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GPT-Image-2 中转站索引</title>
+<meta name="description" content="GPT-Image-2 生图中转站与生成平台可用渠道汇总。" />
+<link rel="stylesheet" href="./style.css" />
+<script>
+(function () {
+  var saved = localStorage.getItem("theme");
+  var dark = saved === "dark" || (!saved && window.matchMedia("(prefers-color-scheme: dark)").matches);
+  document.documentElement.dataset.theme = dark ? "dark" : "light";
+})();
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap"><nav class="nav"><a class="brand" href="#top"><span class="brand-mark"></span>GPT-IMAGE / INDEX</a><div class="nav-actions"><button class="ghost-btn icon-btn" id="theme-toggle" aria-label="切换亮暗模式" title="切换亮暗模式"><img class="theme-icon" id="theme-icon" src="./icons/mode-dark.svg" alt="" /></button></div></nav></div>
+  <div class="wrap hero" id="top">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">GPT-IMAGE-2 / CHANNEL DIRECTORY</div>
+        <h1>找到适合你的<br />生图中转站。</h1>
+        <p class="hero-copy">把分散在社区、群聊与收藏夹里的 GPT-Image-2 渠道，整理成一张可搜索、可比较的使用地图。按计费方式分组，再看价格、评分和备注。</p>
+        <div class="hero-meta"><span class="meta-chip">当前收录 <span id="stat-total">0</span> 个渠道</span><span class="meta-chip">最后整理：2026-09-04</span></div>
+      </div>
+      <aside class="hero-aside"><strong id="stat-top">0</strong><span>个渠道获得 8 分及以上评分</span></aside>
+    </div>
+    <div class="notice-grid">
+      <div class="notice warning"><span class="notice-label">充值提醒</span><p><strong class="recharge-warning">谨慎充值</strong> 价格、注册状态、模型分组会变化。充值前请以渠道站点实时信息为准。</p></div>
+      <div class="notice"><span class="notice-label">网络工具</span><p>需要科学上网？<a href="https://xn--9kqz23b19z.com/#/register?code=Llp9tlCM" target="_blank" rel="noreferrer">查看低价稳定方案 ↗</a></p></div>
+    </div>
+    <div class="video-card"><iframe src="https://www.youtube.com/embed/zAT2wiqBalY" title="GPT-Image-2 使用介绍" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen loading="lazy"></iframe></div>
+    <div class="video-caption">视频无法加载？<a href="https://www.youtube.com/watch?v=zAT2wiqBalY" target="_blank" rel="noreferrer">在 YouTube 打开 ↗</a></div>
+  </div>
+</header>
+
+<main id="channels">
+  <div class="wrap section search-section">
+    <div class="toolbar">
+      <div><div class="eyebrow">FILTER / SORT</div><p class="section-desc">点击表头「推荐」或「价格」即可切换排序方向。</p></div>
+      <input class="search" id="search" placeholder="搜索名称、备注、网址…" />
+    </div>
+  </div>
+
+  <section class="section table-section color-block block-lime" id="table-metered">
+    <div class="wrap">
+      <div class="section-header"><div><div class="eyebrow">01 / PAY AS YOU GO</div><h2 class="section-title">按量计费</h2><p class="section-desc">按 token 消耗计费，参考图越多越贵；适合单张文生图。</p></div><span class="section-index" id="count-metered">0 CHANNELS</span></div>
+      <div class="table-shell"><div class="table-scroll">
+        <table>
+          <thead><tr><th>名称 / 注册网址</th><th><button class="sort-button active" id="sort-rating">推荐 <span id="arrow-rating">↓</span></button></th><th><button class="sort-button" id="sort-price">价格 <span id="arrow-price">↕</span></button></th><th>备注</th></tr></thead>
+          <tbody id="rows-metered"></tbody>
+        </table>
+        <div class="empty" id="empty-metered" hidden>没有匹配的渠道</div>
+      </div></div>
+    </div>
+  </section>
+
+  <section class="section table-section color-block block-lilac" id="table-prepaid">
+    <div class="wrap">
+      <div class="section-header"><div><div class="eyebrow">02 / PAY PER IMAGE</div><h2 class="section-title">按次计费</h2><p class="section-desc">按出图张数计费，多参考图场景更划算。</p></div><span class="section-index" id="count-prepaid">0 CHANNELS</span></div>
+      <div class="table-shell"><div class="table-scroll">
+        <table>
+          <thead><tr><th>名称 / 注册网址</th><th><button class="sort-button active" id="sort-rating2">推荐 <span id="arrow-rating2">↓</span></button></th><th><button class="sort-button" id="sort-price2">价格 <span id="arrow-price2">↕</span></button></th><th>备注</th></tr></thead>
+          <tbody id="rows-prepaid"></tbody>
+        </table>
+        <div class="empty" id="empty-prepaid" hidden>没有匹配的渠道</div>
+      </div></div>
+    </div>
+  </section>
+
+  <section class="section color-block block-cream" id="platforms">
+    <div class="wrap">
+      <div class="section-header"><div><div class="eyebrow">03 / CREATION TOOLS</div><h2 class="section-title">生成平台</h2></div><span class="section-index" id="count-platforms">0 TOOLS</span></div>
+      <div class="platform-grid" id="platform-grid"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="wrap footer-row"><span>GPT-IMAGE / INDEX</span><span>价格与可用性以目标站点为准</span></div></footer>
+
+<script src="./data.js"></script>
+<script src="./main.js"></script>
+</body>
+</html>

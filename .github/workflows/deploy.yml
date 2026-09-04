@@ -19,19 +19,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - run: npm run build
-        env:
-          NEXT_PUBLIC_BASE_PATH: /image-transit
-      # Jekyll 会忽略 _next 等下划线开头的目录，必须关掉
-      - run: touch out/.nojekyll
+      # 纯静态站：无需构建，收集文件后直接发布
+      - name: Collect site files
+        run: |
+          mkdir -p _site
+          cp index.html data.js main.js style.css _site/
+          cp -r icons _site/
+          touch _site/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: out
+          path: _site
 
   deploy:
     needs: build
