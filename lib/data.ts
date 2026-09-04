@@ -33,7 +33,7 @@ export const CHANNELS: Channel[] = [
   { name: "Grsai", url: "https://grsai.com/", billing: "按次计费", price: "0.060", rating: 7, note: "其他博主有很多推这个的，说比较稳，我积分用完了，没再测了" },
   { name: "不吃坤肉(生图版)", url: "https://img.yunfei.best/sign-up?aff=2u5b", billing: "按次计费", price: "0.020-0.060", rating: 7, note: "价格低，速度也不错，但4K分组下线了" },
   { name: "倾梦", url: "https://aiapi.317ak.com/sign-up?aff=fYjB", billing: "按次计费", price: "0.010", rating: 7, note: "价格超低，但不是原生4K" },
-  { name: "APIQIK 主站", url: "https://www.apiqik.com/auth/register?ref=ZTXo", billing: "按量计费", price: "￥3/M", rating: 10, note: "谨慎充值，按量计费的，codex分组比较便宜，但只能1K，4K要用azure/sp/gpt分组，速度很快，这个是综合体验最好的，如果经常用很多参考图的话，按量计费会很贵，建议尝试按次计费的站，单张图生图或文生图可以用", highlights: [{ text: "codex分组", color: "blue" }, { text: "azure/sp/gpt分组", color: "blue" }, { text: "如果经常用很多参考图的话，按量计费会很贵，建议尝试按次计费的站", color: "red" }] },
+  { name: "APIQIK 主站", url: "https://www.apiqik.com/auth/register?ref=ZTXo", billing: "按量计费", price: "￥3/M", rating: 10, note: "注册送7￥额度，可以白嫖一下，谨慎充值，按量计费的，codex分组比较便宜，但只能1K，4K要用azure/sp/gpt分组，速度很快，这个是综合体验最好的，如果经常用很多参考图的话，按量计费会很贵，建议尝试按次计费的站，单张图生图或文生图可以用", highlights: [{ text: "codex分组", color: "blue" }, { text: "azure/sp/gpt分组", color: "blue" }, { text: "如果经常用很多参考图的话，按量计费会很贵，建议尝试按次计费的站", color: "red" }] },
   { name: "onehop", url: "https://onehop.ai/invite/68CSRD", billing: "按量计费", price: "￥1.5/M", rating: 8, note: "仅支持1K，适合文生图使用，基本都在1分钱以下，2K和4K会变成香蕉模型，很奇怪" },
   { name: "球球", url: "https://qiuqiutoken.com/sign-up?aff=Dt1z", billing: "按量计费", price: "￥1.9/M", rating: 8, note: "按量和按次计费都有，视觉生成专用-gpt_image-codex分组价格非常低，基本都在1分钱以下，但只能1K，适合文生图使用。其他分组有4K但并不稳定。\n还支持香蕉和grok模型", highlights: [{ text: "视觉生成专用-gpt_image-codex", color: "blue", code: true }] },
 ];
