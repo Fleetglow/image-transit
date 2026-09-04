@@ -59,8 +59,10 @@ button { cursor: pointer; }
 .ghost-btn, .outline-btn { min-height: 32px; padding: 4px 10px; border: 1px solid transparent; border-radius: 6px; background: transparent; color: var(--body); font-size: 14px; transition: background .2s ease, border-color .2s ease, color .2s ease; }
 .ghost-btn:hover, .outline-btn:hover { border-color: var(--hairline); background: var(--canvas-soft); color: var(--ink); text-decoration: none; }
 .icon-btn { display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border-color: var(--hairline); color: var(--ink); }
-.theme-icon { display: block; width: 16px; height: 16px; }
-[data-theme="dark"] .theme-icon { filter: invert(1); }
+.theme-icon { display: block; width: 16px; height: 16px; color: var(--ink); }
+.icon-moon { display: none; }
+[data-theme="dark"] .icon-sun { display: none; }
+[data-theme="dark"] .icon-moon { display: block; }
 
 .hero { position: relative; isolation: isolate; overflow: hidden; width: 100vw; margin-left: calc(50% - 50vw); padding: 112px max(24px, calc((100vw - 1200px) / 2)) 96px; border-bottom: 1px solid var(--hairline); }
 .hero::before { position: absolute; z-index: -1; top: 0; left: 0; width: 100%; height: 100%; content: ""; opacity: .72; filter: blur(34px) saturate(1.2); background: radial-gradient(ellipse at 15% 56%, rgba(0, 124, 240, .32), transparent 34%), radial-gradient(ellipse at 42% 38%, rgba(121, 40, 202, .3), transparent 39%), radial-gradient(ellipse at 70% 46%, rgba(255, 0, 128, .26), transparent 34%), radial-gradient(ellipse at 82% 78%, rgba(249, 203, 40, .28), transparent 30%), radial-gradient(ellipse at 48% 88%, rgba(0, 223, 216, .24), transparent 30%); transform: rotate(-8deg); pointer-events: none; }

@@ -122,21 +122,15 @@
     renderAll();
   }
 
-  // 主题切换
-  var themeIcon = document.getElementById("theme-icon");
+  // 主题切换（图标显隐由 CSS 按 data-theme 控制）
   function isDark() {
     return document.documentElement.dataset.theme === "dark";
-  }
-  function syncThemeIcon() {
-    themeIcon.src = isDark() ? "./icons/mode-light.svg" : "./icons/mode-dark.svg";
   }
   document.getElementById("theme-toggle").addEventListener("click", function () {
     var next = isDark() ? "light" : "dark";
     document.documentElement.dataset.theme = next;
     localStorage.setItem("theme", next);
-    syncThemeIcon();
   });
-  syncThemeIcon();
 
   // 搜索
   document.getElementById("search").addEventListener("input", function (event) {
