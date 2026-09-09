@@ -1,7 +1,7 @@
 // 渠道与平台数据——与原 Next.js 版 lib/data.ts 结构完全一致，日常更新只改这个文件
 // highlights 可选字段: text(必填), color("blue"|"red"), url(可选,渲染为链接), code(可选,等宽样式)
 const CHANNELS = [
-  { name: "65535", url: "https://my.65535.space/register?aff=U2RF7SAVFLP3", billing: "按次计费", price: "0.038-0.100", rating: 10, note: "支持异步协议，多个渠道，低价组超分4K，稳定组原生4K。而且网站里还能看到出图记录，夯！支持香蕉生图" },
+  { name: "65535", url: "https://my.65535.space/register?aff=U2RF7SAVFLP3", billing: "按次计费", price: "0.038-0.100", rating: 10, note: "gpt-image-2.5已上线！支持异步协议，多个渠道，低价组超分4K，稳定组原生4K。而且网站里还能看到出图记录，夯！支持香蕉生图" },
   { name: "apilio（柏拉图）", url: "https://api.apilio.ai/register?aff=zkhB140656", billing: "按次计费", price: "0.060", rating: 9, note: "4K生图已恢复，很快" },
   { name: "Change2Pro", url: "https://forkc2p.com/register?aff=WCYL3GENQDLL", billing: "按次计费", price: "0.020-0.100", rating: 9, note: "渠道也很多，支持原生4K，支持香蕉生图" },
   { name: "AI派", url: "https://aipaiai.cn/register?aff=rEMO", billing: "按次计费", price: "0.050-0.060", rating: 8, note: "1K4K价格一样，但速度不稳定，时快时慢" },
