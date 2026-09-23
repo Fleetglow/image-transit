@@ -1,7 +1,7 @@
 // 渠道与平台数据——与原 Next.js 版 lib/data.ts 结构完全一致，日常更新只改这个文件
 // highlights 可选字段: text(必填), color("blue"|"red"), url(可选,渲染为链接), code(可选,等宽样式)
 const CHANNELS = [
-  { name: "65535", url: "https://my.65535.space/register?aff=U2RF7SAVFLP3", billing: "按次计费", price: "0.038-0.100", rating: 10, note: "gpt-image-2.5已上线！支持异步协议，多个渠道，低价组超分4K，稳定组原生4K。而且网站里还能看到出图记录，夯！支持香蕉生图" },
+  { name: "65535", url: "https://my.65535.space/register?aff=U2RF7SAVFLP3", billing: "按次计费", price: "0.038-0.100", rating: 10, note: "image-2模型实际调用的是2.5，支持异步协议，多个渠道，低价组超分4K，稳定组原生4K。而且网站里还能看到出图记录，夯！支持香蕉生图" },
   { name: "apilio（柏拉图）", url: "https://api.apilio.ai/register?aff=zkhB140656", billing: "按次计费", price: "0.060", rating: 9, note: "4K生图已恢复，很快" },
   { name: "Change2Pro", url: "https://forkc2p.com/register?aff=WCYL3GENQDLL", billing: "按次计费", price: "0.020-0.100", rating: 9, note: "渠道也很多，支持原生4K，支持香蕉生图" },
   { name: "幻灵AI", url: "https://api.huanling.icu/register?aff=73X72T5J7T4R", billing: "按次计费", price: "0.030-0.060", rating: 9, note: "adobe渠道4K还不错，便宜，速度也可以" },
@@ -14,7 +14,7 @@ const CHANNELS = [
   { name: "MikotoPro", url: "https://api.mikoto.vip/register?aff=SGQGHCBKSKRL", billing: "按次计费", price: "0.020-0.080", rating: 8, note: "1K分组0.02一张，4K0.08" },
   { name: "ProxyAI", url: "https://cn.proxy2it.com/register?aff=36XEVVMQWVBJ", billing: "按次计费", price: "0.050-0.120", rating: 8, note: "低价组0.05，只能1K。稳定组原生4K，0.12/张" },
   { name: "square api", url: "https://api.squarefaceicon.org/sign-up?aff=rr98", billing: "按次计费", price: "0.050-0.080", rating: 8, note: "0.05是超分4K，0.08是原生4K" },
-  { name: "摸鱼AI", url: "https://moyuu.cc/register?aff=ANO9", billing: "按次计费", price: "0.012-0.104", rating: 8, note: "支持原生4K，速度也还行，支持香蕉生图" },
+  { name: "摸鱼AI", url: "https://moyuu.cc/register?aff=ANO9", billing: "按次计费", price: "0.016-0.104", rating: 9, note: "支持原生4K，速度也还行，支持香蕉生图" },
   { name: "漫小白", url: "https://api.manxiaobai.online/register?aff=m8AZ", billing: "按次计费", price: "0.020-0.108", rating: 8, note: "渠道多，支持原生4K，但要使用网站生图工作台，画布软件会超时且扣费，支持香蕉生图", highlights: [{ text: "但要使用网站", color: "blue" }, { text: "生图工作台", color: "blue", url: "https://api.manxiaobai.online/brand-preview/create/" }, { text: "，画布软件会超时且扣费", color: "blue" }, { text: "，支持香蕉生图", color: "blue" }] },
   { name: "Grsai", url: "https://grsai.com/", billing: "按次计费", price: "0.060", rating: 7, note: "其他博主有很多推这个的，说比较稳，我积分用完了，没再测了" },
   { name: "不吃坤肉(生图版)", url: "https://img.yunfei.best/sign-up?aff=2u5b", billing: "按次计费", price: "0.020-0.060", rating: 7, note: "价格低，速度也不错，但4K分组下线了" },
